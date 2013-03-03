@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <title>Is it a lamb day today?</title>
+    <link href='http://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            text-align: center;
+            font-size: 22px;
+            font-family: "Georgia", Times, serif;
+            line-height: 1.4;
+        }
+        h1 {
+            font-size: 4em;
+            font-family: 'Give You Glory', cursive;
+            line-height:1em;
+        }
+        .deets {
+            font-size: 0.7em;
+        }
+
+        #about {
+            margin:auto;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <p>Is today a lamb day?</p>
+    <h1 id="result"></h1>
+    <h2 id="message"></h2>
+    <div id="about">
+         <p>
+             Some people just really want to know if the <a href="http://www.moro.co.uk/">Moro</a> stall is serving Lamb in <a href="http://www.exmouth-market.com/">Exmouth Market</a>.
+         </p>
+         <p>
+            Seriously, this shit is important!
+         </p>
+         <p class="deets">
+             Tuesdays and Fridays, baby. Tuesdays and Friday.
+         </p>
+    </div>
+    <script>
+
+    (function (){
+
+        var getRandomString = function(array) {
+          return array[Math.floor(Math.random() * (array.length))];
+        }
+
+        var now = new Date();
+        var afirmatives = ['Yeah, Baby!', 'Yes indeed!', 'Hell yeah!', 'Damn straight!', 'Yep. Get some!'];
+        var negatives = ['No.', 'Nope.', 'Nah.', 'No such luck.', 'Not today.', 'Pfffft. You wish!', 'No. It\'s salad for you!'];
+        var result = document.getElementById("result");
+        var message = document.getElementById("message");
+
+        if (now.getDay() == 2 || now.getDay() == 5) {
+            result.innerText = getRandomString(afirmatives);
+        } else {
+            result.innerText = getRandomString(negatives);
+        };
+
+    })();
+
+    </script>
+</body>
+</html>
