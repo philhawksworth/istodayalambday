@@ -55,9 +55,9 @@
         var message = document.getElementById("message");
 
         if (now.getDay() == 2 || now.getDay() == 5) {
-            result.innerText = getRandomString(afirmatives);
+            result.innerHTML = getRandomString(afirmatives);
         } else {
-            result.innerText = getRandomString(negatives);
+            result.innerHTML = getRandomString(negatives);
         };
 
     })();
