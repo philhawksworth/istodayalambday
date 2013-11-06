@@ -37,7 +37,7 @@
             Seriously, this shit is important!
          </p>
          <p class="deets">
-             Mondays and Fridays, baby. Mondays and Fridays.
+             Mondays and Wednesdays, baby. Mondays and Wednesdays.
          </p>
     </div>
     <script>
@@ -54,7 +54,7 @@
         var result = document.getElementById("result");
         var message = document.getElementById("message");
 
-        if (now.getDay() == 1 || now.getDay() == 5) {
+        if (now.getDay() == 1 || now.getDay() == 3) {
             result.innerHTML = getRandomString(afirmatives);
         } else {
             result.innerHTML = getRandomString(negatives);
